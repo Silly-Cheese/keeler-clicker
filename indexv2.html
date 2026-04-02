@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keeler Clicker V2 - Absolute Chaos Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylev2.css" />
+</head>
+<body>
+  <div class="page-noise"></div>
+  <div class="confetti-layer" id="confettiLayer"></div>
+
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-text">
+        <h1>Keeler Clicker V2</h1>
+        <p class="tagline">Absolute Chaos Mode. Bad decisions. Great point economy.</p>
+      </div>
+      <div class="headline-chaos" id="headlineChaos">THE KEELER MARKET IS EXPERIENCING UNPRECEDENTED NONSENSE.</div>
+    </div>
+    <div class="topbar-buttons">
+      <button id="saveBtn">Save</button>
+      <button id="exportBtn">Export</button>
+      <button id="importBtn">Import</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </div>
+  </header>
+
+  <section class="news-ticker-wrap">
+    <div class="news-label">LIVE CHAOS</div>
+    <div class="news-ticker"><span id="eventText">Initializing Keeler economy. Please remain chaotic.</span></div>
+  </section>
+
+  <main class="layout">
+    <section class="left-panel card stack-card">
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-label">Points</span><span class="stat-value" id="pointsDisplay">0</span></div>
+        <div class="stat-box"><span class="stat-label">Per Second</span><span class="stat-value" id="ppsDisplay">0</span></div>
+        <div class="stat-box"><span class="stat-label">Per Click</span><span class="stat-value" id="ppcDisplay">1</span></div>
+        <div class="stat-box"><span class="stat-label">Multiplier</span><span class="stat-value" id="multiplierDisplay">1x</span></div>
+      </div>
+
+      <div class="main-click-zone" id="mainClickZone">
+        <div class="aura-ring aura-one"></div>
+        <div class="aura-ring aura-two"></div>
+        <button id="mainClickButton" class="main-face" aria-label="Click to earn points">
+          <img id="mainFaceImage" src="assets/placeholder-mainv2.svg" alt="Main clickable character" />
+        </button>
+        <h2 id="mainCharacterName">Judy Keeler</h2>
+        <p id="mainCharacterFlavor">Tap the face. Gain the points. Disturb the balance of the universe.</p>
+      </div>
+
+      <div class="bonus-bar-wrap">
+        <div class="bonus-bar-label">Chaos Event Power</div>
+        <div class="bonus-bar"><div id="bonusBarFill"></div></div>
+      </div>
+
+      <div class="achievements-card mini-card">
+        <div class="mini-title-row">
+          <h3>Achievements</h3>
+          <span id="achievementCount">0 unlocked</span>
+        </div>
+        <div id="achievementList" class="achievement-list"></div>
+      </div>
+    </section>
+
+    <section class="middle-panel card stack-card">
+      <div class="section-title-row">
+        <div>
+          <h2>Family Store</h2>
+          <p>Purchase the entire Keeler industrial complex and associated chaos merchants.</p>
+        </div>
+        <button id="buyAllBtn">Buy Max-ish</button>
+      </div>
+      <div id="storeList" class="store-list"></div>
+
+      <div class="section-title-row secondary-title">
+        <div>
+          <h2>Upgrades</h2>
+          <p>Double everything. Complicate reality.</p>
+        </div>
+      </div>
+      <div id="upgradeList" class="upgrade-list"></div>
+    </section>
+
+    <section class="right-panel card stack-card">
+      <div class="section-title-row">
+        <div>
+          <h2>Roster</h2>
+          <p>Future face slots are ready. For now, the chaos is symbolic.</p>
+        </div>
+      </div>
+      <div id="rosterList" class="roster-grid"></div>
+
+      <div class="section-title-row secondary-title">
+        <div>
+          <h2>Prestige Lab</h2>
+          <p>Reset your progress for permanent absurdity.</p>
+        </div>
+      </div>
+      <div class="prestige-box mini-card">
+        <div class="prestige-stat"><span>Chaos Crumbs</span><strong id="prestigePointsDisplay">0</strong></div>
+        <div class="prestige-stat"><span>Reset Reward</span><strong id="prestigeRewardDisplay">0</strong></div>
+        <button id="prestigeBtn">Ascend Into Madness</button>
+      </div>
+
+      <div class="section-title-row secondary-title">
+        <div>
+          <h2>Log of Nonsense</h2>
+          <p>Recent incidents affecting the local economy.</p>
+        </div>
+      </div>
+      <div id="logList" class="log-list"></div>
+    </section>
+  </main>
+
+  <template id="floatTextTemplate">
+    <span class="float-text">+1</span>
+  </template>
+
+  <script src="scriptv2.js"></script>
+</body>
+</html>
