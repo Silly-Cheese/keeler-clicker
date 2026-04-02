@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keeler Clicker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-bubbles"></div>
+
+  <header class="topbar">
+    <div>
+      <h1>Keeler Clicker</h1>
+      <p class="tagline">A chaotic family-powered clicker of absolute nonsense.</p>
+    </div>
+    <div class="topbar-buttons">
+      <button id="saveBtn">Save</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="left-panel card">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-label">Points</span>
+          <span class="stat-value" id="pointsDisplay">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Per Second</span>
+          <span class="stat-value" id="ppsDisplay">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Per Click</span>
+          <span class="stat-value" id="ppcDisplay">1</span>
+        </div>
+      </div>
+
+      <div class="main-click-zone">
+        <button id="mainClickButton" class="main-face" aria-label="Click to earn points">
+          <img id="mainFaceImage" src="assets/placeholder-main.svg" alt="Main clickable character" />
+        </button>
+        <h2 id="mainCharacterName">Judy Keeler</h2>
+        <p id="mainCharacterFlavor">Tap the face. Gain the points. Embrace the chaos.</p>
+      </div>
+
+      <div class="event-box">
+        <h3>Breaking News</h3>
+        <p id="eventText">The Keeler economy is stable... for now.</p>
+      </div>
+    </section>
+
+    <section class="middle-panel card">
+      <div class="section-title-row">
+        <h2>Family Store</h2>
+        <p>Buy more people, pets, and suspicious allies to farm points automatically.</p>
+      </div>
+      <div id="storeList" class="store-list"></div>
+    </section>
+
+    <section class="right-panel card">
+      <div class="section-title-row">
+        <h2>Upgrades</h2>
+        <p>Boost the nonsense. Break the economy.</p>
+      </div>
+      <div id="upgradeList" class="upgrade-list"></div>
+
+      <div class="section-title-row secondary-title">
+        <h2>Roster</h2>
+        <p>Image slots are wired and ready for real photos later.</p>
+      </div>
+      <div id="rosterList" class="roster-list"></div>
+    </section>
+  </main>
+
+  <template id="floatTextTemplate">
+    <span class="float-text">+1</span>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
