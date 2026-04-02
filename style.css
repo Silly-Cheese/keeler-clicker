@@ -1,0 +1,11 @@
+body {margin:0;font-family:'Nunito',sans-serif;background:linear-gradient(135deg,#ff9ff3,#48dbfb);overflow-x:hidden;color:#222}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#fff;border-bottom:4px solid #000}
+h1{font-family:'Luckiest Guy',cursive;margin:0}
+.layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;padding:15px}
+.card{background:#fff;border:4px solid #000;border-radius:16px;padding:10px}
+.main-face img{width:200px;height:200px;border-radius:50%;transition:transform .1s}
+.main-face:active img{transform:scale(.9)}
+button{cursor:pointer;padding:8px;border:2px solid #000;border-radius:8px;background:#ffeaa7}
+.store-item,.upgrade-item{border:2px dashed #000;margin:5px;padding:5px}
+.float-text{position:absolute;animation:floatUp 1s ease-out}
+@keyframes floatUp{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-50px)}}
