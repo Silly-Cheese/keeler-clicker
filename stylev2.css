@@ -1,0 +1,13 @@
+body{margin:0;font-family:'Nunito',sans-serif;background:radial-gradient(circle at 20% 20%,#ff00cc,#3333ff,#00ffee);color:#111;overflow-x:hidden}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#fff;border-bottom:5px solid #000}
+.layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;padding:15px}
+.card{background:#fff;border:4px solid #000;border-radius:18px;padding:12px;box-shadow:6px 6px 0 #000}
+.main-face img{width:220px;height:220px;border-radius:50%;animation:spin 10s linear infinite}
+@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+.float-text{position:absolute;font-weight:900;animation:floatUp 1s ease-out}
+@keyframes floatUp{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-80px)}}
+button{cursor:pointer;border:3px solid #000;background:#ffeaa7;padding:8px;border-radius:10px;font-weight:700}
+.roster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.news-ticker{overflow:hidden;white-space:nowrap}
+.news-ticker span{display:inline-block;animation:scroll 10s linear infinite}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
